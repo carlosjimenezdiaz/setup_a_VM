@@ -84,7 +84,7 @@ sed -i 's/#PermitRootLogin yes/PermitRootLogin prohibit-password/' /etc/ssh/sshd
 sed -i 's/PermitRootLogin yes/PermitRootLogin prohibit-password/' /etc/ssh/sshd_config
 sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config
 sed -i 's/PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config
-systemctl reload sshd
+systemctl reload ssh
 echo "✅ SSH: root solo por clave, password auth desactivado"
 
 # === 10. System Limits (for Docker workloads) ===
